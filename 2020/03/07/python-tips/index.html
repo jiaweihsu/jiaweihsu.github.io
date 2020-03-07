@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Python3 中實用的 10 種小技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python3 中實用的 10 種小技巧">
+<meta property="og:url" content="http://yoursite.com/2020/03/07/python-tips/index.html">
+<meta property="og:site_name" content="BryanHsu&#39;s blog">
+<meta property="og:description" content="Python3 中實用的 10 種小技巧">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-06T16:27:10.000Z">
+<meta property="article:modified_time" content="2020-03-07T10:04:41.722Z">
+<meta property="article:author" content="BryanHsu">
+<meta property="article:tag" content="Python3">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/03/07/python-tips/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>Python3 中實用的 10 種小技巧 | BryanHsu's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BryanHsu's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/07/python-tips/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bryan.jpg">
+      <meta itemprop="name" content="BryanHsu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BryanHsu's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python3 中實用的 10 種小技巧
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-07 00:27:10 / Modified: 18:04:41" itemprop="dateCreated datePublished" datetime="2020-03-07T00:27:10+08:00">2020-03-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="三元運算子"><a href="#三元運算子" class="headerlink" title="三元運算子"></a>三元運算子</h1><p>常見寫法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> conditon:</span><br><span class="line">    x = <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>可以寫成：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span> <span class="keyword">if</span> condition <span class="keyword">else</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="底線數字表示"><a href="#底線數字表示" class="headerlink" title="底線數字表示"></a>底線數字表示</h1><p>常見寫法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">num1 = <span class="number">10000000000</span></span><br><span class="line">num2 = <span class="number">100000000</span></span><br></pre></td></tr></table></figure>
+<p>可以寫成：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num1 = <span class="number">10</span>_000_000_000</span><br><span class="line">num2 = <span class="number">100</span>_000_000</span><br><span class="line"></span><br><span class="line">print(num1) <span class="comment"># 10000000000</span></span><br><span class="line">print(<span class="string">f'<span class="subst">&#123;num1:,&#125;</span>'</span>) <span class="comment"># 10,000,000,000</span></span><br></pre></td></tr></table></figure>
+<p>提昇可讀性且數字不會被底線影響。</p>
+<h1 id="資源管理器"><a href="#資源管理器" class="headerlink" title="資源管理器"></a>資源管理器</h1><p>通常我們程式做 I/O 都有開啟跟關閉，常常會忘記在程式碼結尾忘記關掉。<br>所以 <code>with</code> 這個語法會自動做開啟關閉的動作。</p>
+<p>常見寫法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line">file_contents = f.read()</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>可以寫成：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    file_contents = f.read()</span><br></pre></td></tr></table></figure>
+
+<h1 id="Enumerate"><a href="#Enumerate" class="headerlink" title="Enumerate"></a>Enumerate</h1><p>當我們要走訪一個序列且我們需要他的索引時，</p>
+<p>常見寫法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line">index = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> d <span class="keyword">in</span> data:</span><br><span class="line">    print(index, d)</span><br><span class="line">    index += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>可以寫成：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line"><span class="keyword">for</span> index, d <span class="keyword">in</span> enumerate(data):</span><br><span class="line">    print(index, d)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Zip"><a href="#Zip" class="headerlink" title="Zip"></a>Zip</h1><p>當我們要一次走訪兩個相同長度的序列，</p>
+<p>常見寫法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line">nums = [<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>]</span><br><span class="line"><span class="keyword">for</span> index, d <span class="keyword">in</span> enumerate(data):</span><br><span class="line">    print(d, nums[index])</span><br></pre></td></tr></table></figure>
+
+<p>可以寫成：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line">nums = [<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>]</span><br><span class="line"><span class="keyword">for</span> d, n <span class="keyword">in</span> zip(data, nums):</span><br><span class="line">    print(d, n)</span><br></pre></td></tr></table></figure>
+<p><code>zip</code> 甚至可以一次走訪兩個序列以上！</p>
+<h1 id="Unpacking"><a href="#Unpacking" class="headerlink" title="Unpacking"></a>Unpacking</h1><p>當我們有一個 tuple 要依序賦值可以這樣寫：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a, b = (<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">print(a) <span class="comment"># 1</span></span><br><span class="line">print(b) <span class="comment"># 2</span></span><br></pre></td></tr></table></figure>
+
+<p>當我們用不到某個數值時可以使用 <code>_</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a, _ = (<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">print(a) <span class="comment"># 1</span></span><br></pre></td></tr></table></figure>
+
+<p>在這邊我們視 c 為一個可以被 unpack 的變數<br>所以須加上 <code>*</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a, b, *c = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line">print(a) <span class="comment"># 1</span></span><br><span class="line">print(b) <span class="comment"># 2</span></span><br><span class="line">print(c) <span class="comment"># [3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<p>我們也可以這樣寫</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a, b, *_, c = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line">print(a) <span class="comment"># 1</span></span><br><span class="line">print(b) <span class="comment"># 2</span></span><br><span class="line">print(c) <span class="comment"># 5</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Setattr-Getattr"><a href="#Setattr-Getattr" class="headerlink" title="Setattr/Getattr"></a>Setattr/Getattr</h1><p>當我們有一個物件，且我們要使用 String 來取得或是設定他的屬性<br>我們可以這樣寫：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">p = Person()</span><br><span class="line"></span><br><span class="line">setattr(p, <span class="string">'name'</span>, <span class="string">'bryan'</span>)</span><br><span class="line"></span><br><span class="line">print(getattr(p, <span class="string">'name'</span>)) <span class="comment"># bryan</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="GetPass"><a href="#GetPass" class="headerlink" title="GetPass"></a>GetPass</h1><p>當我們要從命令列輸入密碼，我們可以使用 <code>getpass()</code> 取代<br><code>input()</code> 來取得輸入內容，命令列就不會顯示使用者打了什麼。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> getpass <span class="keyword">import</span> getpass</span><br><span class="line"></span><br><span class="line">username = input(<span class="string">'Username'</span>: )</span><br><span class="line">password = getpass(<span class="string">'Password'</span>: )</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Dash-m"><a href="#Dash-m" class="headerlink" title="Dash m"></a>Dash m</h1><p><code>-m</code> 指載入指定模組並且直接執行他，在這個例子中我們利用 <code>-m</code> 參數建立一個 http server</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python3 -m http.server</span><br></pre></td></tr></table></figure>
+
+<h1 id="Help-Dir"><a href="#Help-Dir" class="headerlink" title="Help/Dir"></a>Help/Dir</h1><p><code>help</code>：用來顯示某個模組的說明文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ python3</span><br><span class="line">&gt;&gt;&gt; from datetime import datetime</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">help</span>(datetime)</span><br></pre></td></tr></table></figure>
+
+<p>Output：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Help on class datetime <span class="keyword">in</span> module datetime:</span><br><span class="line"></span><br><span class="line">class datetime(date)</span><br><span class="line"> |  datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]</span><br><span class="line">])</span><br><span class="line"> |  </span><br><span class="line"> |  The year, month and day arguments are required. tzinfo may be None, or an</span><br><span class="line"> |  instance of a tzinfo subclass. The remaining arguments may be ints.</span><br><span class="line"> |  </span><br><span class="line"> |  Method resolution order:</span><br><span class="line"> |      datetime</span><br><span class="line"> |      date</span><br><span class="line"> |      builtins.object</span><br><span class="line"> |  </span><br><span class="line"> |  Methods defined here:</span><br><span class="line"> |  </span><br><span class="line"> |  __add__(self, value, /)</span><br><span class="line"> |      Return self+value.</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><code>dir</code>：用來看物件中的屬性及方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ python3</span><br><span class="line">&gt;&gt;&gt; from datetime import datetime</span><br><span class="line">&gt;&gt;&gt; dir(datetime)</span><br><span class="line">[<span class="string">'__add__'</span>, <span class="string">'__class__'</span>, <span class="string">'__delattr__'</span>, <span class="string">'__dir__'</span>,</span><br><span class="line"> <span class="string">'__doc__'</span>, <span class="string">'__eq__'</span>, <span class="string">'__format__'</span>, <span class="string">'__ge__'</span>, </span><br><span class="line"> <span class="string">'__getattribute__'</span>, <span class="string">'__gt__'</span>, <span class="string">'__hash__'</span>, </span><br><span class="line"> <span class="string">'__init__'</span>, <span class="string">'__init_subclass__'</span>, <span class="string">'__le__'</span>, </span><br><span class="line"> <span class="string">'__lt__'</span>, <span class="string">'__ne__'</span>, <span class="string">'__new__'</span>, <span class="string">'__radd__'</span>, </span><br><span class="line"> <span class="string">'__reduce__'</span>, <span class="string">'__reduce_ex__'</span>, <span class="string">'__repr__'</span>, </span><br><span class="line"> <span class="string">'__rsub__'</span>, <span class="string">'__setattr__'</span>, <span class="string">'__sizeof__'</span>, </span><br><span class="line"> <span class="string">'__str__'</span>, <span class="string">'__sub__'</span>, <span class="string">'__subclasshook__'</span>, </span><br><span class="line"> <span class="string">'astimezone'</span>, <span class="string">'combine'</span>, <span class="string">'ctime'</span>, <span class="string">'date'</span>, <span class="string">'day'</span>, </span><br><span class="line"> <span class="string">'dst'</span>, <span class="string">'fold'</span>, <span class="string">'fromordinal'</span>, <span class="string">'fromtimestamp'</span>, </span><br><span class="line"> <span class="string">'hour'</span>, <span class="string">'isocalendar'</span>, <span class="string">'isoformat'</span>, <span class="string">'isoweekday'</span>, </span><br><span class="line"> <span class="string">'max'</span>, <span class="string">'microsecond'</span>, <span class="string">'min'</span>, <span class="string">'minute'</span>, <span class="string">'month'</span>, </span><br><span class="line"> <span class="string">'now'</span>, <span class="string">'replace'</span>, <span class="string">'resolution'</span>, <span class="string">'second'</span>, </span><br><span class="line"> <span class="string">'strftime'</span>, <span class="string">'strptime'</span>, <span class="string">'time'</span>, <span class="string">'timestamp'</span>, </span><br><span class="line"> <span class="string">'timetuple'</span>, <span class="string">'timetz'</span>, <span class="string">'today'</span>, <span class="string">'toordinal'</span>, </span><br><span class="line"> <span class="string">'tzinfo'</span>, <span class="string">'tzname'</span>, <span class="string">'utcfromtimestamp'</span>, <span class="string">'utcnow'</span>, </span><br><span class="line"> <span class="string">'utcoffset'</span>, <span class="string">'utctimetuple'</span>, <span class="string">'weekday'</span>, <span class="string">'year'</span>]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python3/" rel="tag"># Python3</a>
+          </div>
+
+        
+
+
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#三元運算子"><span class="nav-number">1.</span> <span class="nav-text">三元運算子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#底線數字表示"><span class="nav-number">2.</span> <span class="nav-text">底線數字表示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#資源管理器"><span class="nav-number">3.</span> <span class="nav-text">資源管理器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Enumerate"><span class="nav-number">4.</span> <span class="nav-text">Enumerate</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Zip"><span class="nav-number">5.</span> <span class="nav-text">Zip</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unpacking"><span class="nav-number">6.</span> <span class="nav-text">Unpacking</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Setattr-Getattr"><span class="nav-number">7.</span> <span class="nav-text">Setattr&#x2F;Getattr</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GetPass"><span class="nav-number">8.</span> <span class="nav-text">GetPass</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dash-m"><span class="nav-number">9.</span> <span class="nav-text">Dash m</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Help-Dir"><span class="nav-number">10.</span> <span class="nav-text">Help&#x2F;Dir</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BryanHsu"
+      src="/images/bryan.jpg">
+  <p class="site-author-name" itemprop="name">BryanHsu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiaweihsu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiaweihsu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:bryan@35818363680919@gmail.com" title="E-Mail → mailto:bryan@35818363680919@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BryanHsu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
