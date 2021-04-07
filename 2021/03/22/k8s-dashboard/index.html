@@ -20,6 +20,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CCEHH3Q0YE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CCEHH3Q0YE');
+</script>
   <meta name="description" content="前言最近在自學 k8s 的時候，看到官方文件有提到 Web UI (Dashboard)，想說自己操作一下試試看，目標是透過個人電腦的瀏覽器可以進入 cluster 的 dash board，但是在建立的過程中有遇到一些雷所以在這裡記錄一下。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kubernetes 中如何讓 Dashboard 在無 https 的情況下讓外部存取">
@@ -49,15 +58,6 @@
 
   <title>Kubernetes 中如何讓 Dashboard 在無 https 的情況下讓外部存取 | BryanHsu's blog</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCEHH3Q0YE"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-CCEHH3Q0YE');
-      }
-    </script>
 
 
 
